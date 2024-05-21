@@ -1,0 +1,59 @@
+.Landing .container{
+    margin-left:auto;
+    margin-right:auto;
+    padding-left:15px;
+    padding-right:15px;
+    }
+
+.Landing{
+background-color: #FDFDFD;
+background-image: url("../Assets/wave2.png");
+background-repeat: no-repeat;
+background-position: bottom;
+position:relative;
+font-family: 'Bebas Neue';
+letter-spacing: 2px;
+}
+
+
+
+.Landing .content{
+    display:flex;
+    height:calc(100vh - 64px);
+    align-items: center;
+}
+
+.Landing .content > div{
+    flex:1;
+    font-size:57px;
+    font-weight:600;
+    line-height: 1.8;
+    z-index:2;
+    padding-bottom: 50px;
+    text-align:center;
+}
+
+.Landing .content .content-right{
+ display:none;
+ justify-content: center;
+}
+
+.Landing img{
+    max-width:350px;
+}
+
+@media(max-width:550px){
+    .Landing .content > div{
+        font-size:40px;
+    }
+}
+@media(min-width:992px){
+    .Landing .content .content-left{
+        text-align: left;
+        
+    }
+    .Landing .content .content-right{
+        display:flex;
+    }
+
+}

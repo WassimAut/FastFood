@@ -1,0 +1,99 @@
+.item{
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 0 2px 15px rgb(0 0 0 / 10%);
+    transition:0.3s;
+}
+
+.item > div:first-of-type{
+    /* background-color: #374151; */
+}
+
+.item .animated{
+    animation: loading_animation alternate 1s infinite;
+}
+
+.item img{
+    max-width: 100%;
+    width:100%;
+}
+
+.item p.animated-text{
+    width:100px;
+    height:5px;
+    animation: loading_animation alternate 1s infinite;
+    border-radius: 5px;
+}
+
+.item img.loading{
+    opacity:0;
+}
+
+.item .description{
+    padding:5px 10px;
+}
+
+.item p{
+    margin:6px 5px;
+    padding-bottom: 10px;
+   
+}
+
+.item p.productname{
+    font-size:19px;
+     border-bottom: 1px solid #eee;
+}
+
+
+.item-prices{
+
+    display:flex;
+    gap:20px;
+    justify-content:space-between;
+    padding:10px;
+
+}
+
+.item-prices p.animated-price{
+    width:29px;
+    height:5px;
+    animation: loading_animation alternate 1s infinite;
+    border-radius:10px;
+}
+
+
+.item-price-new{
+    color:#374151;
+    font-size:18px;
+    font-weight: 600;
+}
+
+
+.item-prices button{
+background:#fbbb42;
+border:none;
+color:white;
+border-radius:5px;
+font-size:16px;
+font-weight:600;
+width:fit-content;
+
+}
+
+
+
+
+.item:hover{
+    
+    box-shadow: 0 2px 15px rgb(0 0 0 / 20%);
+}
+
+@keyframes loading_animation {
+    0%{
+        background-color: hsl(200, 20%, 80%);
+    }
+    100%{
+        background-color: hsl(200, 20%, 95%);
+    }
+}

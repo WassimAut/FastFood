@@ -1,0 +1,138 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+
+@media (min-width:768px) {
+    .container {
+        width: 750px
+    }
+}
+
+/*medium*/
+
+@media (min-width:992px) {
+    .container {
+        width: 970px
+    }
+}
+
+/*Large*/
+
+@media (min-width:1200px) {
+    .container {
+        width: 1170px
+    }
+}
+
+.about_us{
+    padding-top:50px;
+    padding-bottom: 50px;
+    background-color:#FCFAF8;
+    margin-top:50px;
+}
+
+.about_us .container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.about_us .content{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+    flex-direction:column;
+}
+
+.about_us .content > div.imgcontainer{
+      
+    
+}
+
+.about_us .content  div.imgcontainer img{
+    width:100%;
+    min-height:100%;
+    max-width:100%;
+    border-radius: 15px;
+
+}
+
+
+
+.about_us .content div.text{
+   flex-basis:calc(100% - 370px)
+}
+
+.about_us .content div.text h2{
+    text-align: left;
+    text-align: center;
+    font-size: 34px;
+    margin-bottom:15px;
+}
+
+.about_us .content div.text p{
+    font-size:22px;
+    line-height: 1.4;
+    font-family: system-ui;
+}
+
+
+.about_us .content div.text button{
+    padding:10px;
+    border:none;
+    border-radius:10px;
+    font-size:18px;
+    background-color: #fbbb42;
+    
+    cursor:pointer;
+    
+}
+
+.about_us .content div.text button a{
+    text-decoration: none;
+    color:white;
+}
+
+
+
+@media(min-width:768px){
+    .about_us .content{
+       flex-direction: row;
+    }
+
+    .about_us .content  div.imgcontainer img{
+        width:350px
+    }
+
+    .about_us .content div.text h2{
+        font-size:40px;
+        text-align: left;
+    }
+
+    .about_us .content div.text p{
+        line-height: normal;
+        font-size:19px;
+    }
+
+}
+
+@media(min-width:992px){
+    .about_us .content div.text h2{
+        font-size:50px;
+    }
+
+    .about_us .content div.text p{
+        line-height: 1.4;
+        font-size:22px;
+    }
+}
+
+
+
+
+

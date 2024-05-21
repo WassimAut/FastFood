@@ -1,0 +1,82 @@
+.cart .container{
+    margin-left:auto;
+    margin-right:auto;
+    padding-left:15px;
+    padding-right:15px;
+    }
+
+@media (min-width:768px){
+        .container{width:750px}
+        }
+        
+/*medium*/
+        
+@media (min-width:992px){
+        .container{width:970px}
+        }
+        
+ /*Large*/
+        
+@media (min-width:1200px){
+        .container{width:1170px}
+        }
+
+
+.cart table{
+    width:100%;
+    text-align: left;
+    border-collapse: collapse;
+}
+
+
+.cart .content{
+    padding-top:50px;
+}
+
+
+
+
+.cart table th{
+    padding:10px;
+    background:#eee;
+    border:none;
+}
+
+.cart .total .totaltopay{
+    
+    margin: auto;
+    margin-top: 50px;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.cart .total .totaltopay div{
+    
+    background: #eee;
+    flex-basis: 400px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.cart .total .totaltopay p{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+
+.cart .total .totaltopay button{
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    background: #fbbb42;
+    color: white;
+    font-weight: 700;
+    font-size: 17px;
+    cursor:pointer;
+}

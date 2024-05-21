@@ -1,0 +1,55 @@
+
+@media (min-width:768px){
+    .container{width:750px}
+    }
+    
+/*medium*/
+    
+@media (min-width:992px){
+    .container{width:970px}
+    }
+    
+/*Large*/
+    
+@media (min-width:1200px){
+    .container{width:1170px}
+    }
+
+
+
+.oursandwich{
+padding-top:50px;
+}
+
+.oursandwich .container{
+margin-left:auto;
+margin-right:auto;
+padding-left:15px;
+padding-right:15px;
+}
+
+.container h2{
+text-align:center;
+font-size:50px;
+margin:0;
+margin-bottom:50px;
+}
+
+.oursandwich .content{
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.oursandwich .content > div{
+flex-basis:calc((100% / 2) - 20px / 2)
+}
+
+@media(min-width:992px){
+.oursandwich .content > div{
+    flex-basis:calc((100% / 3) - 40px / 3)
+}
+}
+
+
+
