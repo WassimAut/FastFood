@@ -14,7 +14,7 @@ const Login = () => {
    })
 
    const Login = async()=>{
-    console.log("login function");
+    
     let response = await fetch(`${API_URL}/login`,{
     method:"POST",
     headers:{
@@ -28,7 +28,7 @@ const Login = () => {
    if (data.success){
 
       localStorage.setItem("auth-token",data.token);
-      console.log("from login",data.username);
+      
       
       setUsername("zzzzzz");
       localStorage.setItem("Foodyoxusername",data.username)
@@ -41,12 +41,12 @@ const Login = () => {
         text: "Please verify your information!",
         icon: "error"
    })
-   console.log(data)
+   
    }
 }
 
    const Signup = async()=>{
-   console.log("signup function");
+   
    let response = await fetch(`${API_URL}/signup`,{
     method:"POST",
     headers:{
@@ -70,14 +70,14 @@ const Login = () => {
         icon: "error"
    })
    }
-   console.log(data)
+   
    }
 
    const Handelchange = (e)=>{
     setFormdata((prev)=>{return {...prev,[e.target.name]:e.target.value}})
    }
 
-   console.log(Formdata);
+
   return (
     <div className="login">
         <div className='container'>

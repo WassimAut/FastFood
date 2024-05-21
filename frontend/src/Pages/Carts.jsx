@@ -23,15 +23,13 @@ const Carts = () => {
     }
   },[cart])
 
-   console.log(Selectedproduct);
-  const Submit_order = async()=>{
+   
+    const Submit_order = async()=>{
     let order_details = Selectedproduct;
     let Amount = totalPrice;
     let username = localStorage.getItem("Foodyoxusername");
 
-    console.log("you name is ",username);
-    console.log("your shopping amount is",Amount);
-    console.log("the details of your shopping",order_details);
+    
 
     if (totalPrice>0){
        try{

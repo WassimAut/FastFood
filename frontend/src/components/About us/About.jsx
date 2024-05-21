@@ -9,7 +9,7 @@ const About = () => {
       
         const updateImageUrl = () => {
           const width = window.innerWidth;
-          console.log(width)
+          
           if (width < 768) {
             setImageUrl(Mobileimg);
             

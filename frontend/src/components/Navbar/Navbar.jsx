@@ -10,8 +10,7 @@ const Navbar = () => {
   let {NSelectedItems} = useContext(StoreContext);
   let Listref = useRef();
   const Handel = (e)=>{
-//    console.log("i have been clicked")
-   Listref.current.classList.toggle("pop")
+  Listref.current.classList.toggle("pop")
   }
   return (
     <div className="navbar">
