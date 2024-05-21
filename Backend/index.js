@@ -1,3 +1,4 @@
+const API_URL=require('./config');
 const port = 5000;
 const express = require('express');
 const app = express();
@@ -7,6 +8,7 @@ const path = require('path');
 const cors = require("cors");
 const jwt =require('jsonwebtoken');
 require('dotenv').config();
+
 app.use(cors());
 app.use(express.json());
 app.use("/images", express.static("upload/images"));
@@ -146,7 +148,6 @@ const Users = mongoose.model("Users",{
         type:String,
         required:true
     }
-
 })
 
 const storage = multer.diskStorage({
@@ -162,7 +163,7 @@ app.post("/upload", upload.single('product'), (req, res) => {
     console.log("upload has been done")
     res.json({
         success: 1,
-        image_url: `http://localhost:${port}/images/${req.file.filename}`
+        image_url: `${API_URL}/images/${req.file.filename}`
     })
 })
 
@@ -223,8 +224,8 @@ app.post("/training",async(req,res)=>{
 })
 app.get("/availableproduct",async(req,res)=>{
     let all_product = await AvailableProducts.find({});
-    console.log("availableproduct has been clicked")
-    res.json({success:true,data:all_product})
+    console.log("availableproduct has been clicked");
+    res.json({success:true,data:all_product});
 })
 
 
