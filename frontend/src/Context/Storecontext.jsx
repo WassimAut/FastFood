@@ -1,4 +1,5 @@
 import React, { createContext, useContext, useEffect, useState } from 'react'
+import API_URL from "../config"
 export const StoreContext = createContext(null);
 export const HomepageContext = createContext(null);
 const getdefaultcart = ()=>{
@@ -55,7 +56,7 @@ const StorecontextProvider = ({children}) => {
     useEffect(()=>{
         const fetchAvailableproduct = async()=>{
            try{
-               let response = await fetch("http://localhost:5000/availableproduct");
+               let response = await fetch(`${API_URL}/availableproduct`);
                let Data = await response.json();
                if (Data.success) {
                    // setData(Data.data);

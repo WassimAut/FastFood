@@ -4,6 +4,8 @@ import { StoreContext } from '../Context/Storecontext.jsx'
 import Cartitem from '../components/Cartitem/Cartitem.jsx'
 import "./Css/Carts.css"
 import Swal from 'sweetalert2'
+import API_URL from "../../src/config"
+
 const Carts = () => {
   let {Username,cart,AvailableProducts,Selectedproduct} = useContext(StoreContext);
   let [totalPrice,setTotalPrice]=useState(0);
@@ -33,7 +35,7 @@ const Carts = () => {
 
     if (totalPrice>0){
        try{
-           let response = await fetch("http://localhost:5000/submitorder", {
+           let response = await fetch(`${API_URL}/submitorder`, {
                method: "POST",
                headers: {
                    Accept: "application/json",

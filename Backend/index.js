@@ -625,8 +625,6 @@ app.post("/sendmessage", async(req,res)=>{
 
 
 app.listen(port, (error) => {
-    console.log(process.env.Secret_Key);
-    console.log(process.env.MONGODB_URI)
     if (!error) {
         console.log("Server is Running on Port " + port);
     }

@@ -3,6 +3,7 @@ import Swal from 'sweetalert2';
 import './Css/Login.css'
 import { useState } from 'react';
 import { StoreContext } from '../Context/Storecontext';
+import API_URL from "../../src/config";
 const Login = () => {
    let [status,setStatus]= useState("Login");
    let {Username,setUsername}= useContext(StoreContext);
@@ -14,7 +15,7 @@ const Login = () => {
 
    const Login = async()=>{
     console.log("login function");
-    let response = await fetch("http://localhost:5000/login",{
+    let response = await fetch(`${API_URL}/login`,{
     method:"POST",
     headers:{
         Accept:"application/json",
@@ -46,7 +47,7 @@ const Login = () => {
 
    const Signup = async()=>{
    console.log("signup function");
-   let response = await fetch("http://localhost:5000/signup",{
+   let response = await fetch(`${API_URL}/signup`,{
     method:"POST",
     headers:{
         Accept:"application/json",
@@ -55,7 +56,7 @@ const Login = () => {
     body:JSON.stringify({username:Formdata.username,email:Formdata.email,password:Formdata.password})
    })
    let data = await response.json();
-   
+
    if (data.success){
       localStorage.setItem("auth-token",data.token);
       localStorage.setItem("Foodyoxusername",data.username)

@@ -4,14 +4,14 @@ import OurBurgers from '../components/Our Burgers/OurBurgers'
 import OurPizzas from '../components/Our Pizzas/OurPizzas'
 import OurSandwiches from '../components/Our Sandwiches/OurSandwiches'
 import About from '../components/About us/About'
-
+import API_URL from "../../src/config"
 const Home = () => {
   
   let [data,setData]=useState([])
   let [Loading,setLoading]=useState(true)
   useEffect(()=>{
     const fetchData = async()=>{
-      let response = await fetch("http://localhost:5000/availableproduct",{
+      let response = await fetch(`${API_URL}/availableproduct`,{
       headers:{
         Accept:"application/json"
       }

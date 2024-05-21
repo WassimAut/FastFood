@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import "./Css/Contactus.css";
 import Swal from 'sweetalert2';
 import maps from "../components/Assets/map.PNG"
+import API_URL from "../../src/config"
 const Contactus = () => {
 
     let [Formdata, setFormdata] = useState({
@@ -21,7 +22,7 @@ const Contactus = () => {
             return
         }
         try {
-            let response = await fetch("http://localhost:5000/sendmessage", {
+            let response = await fetch(`${API_URL}/sendmessage`, {
                 method: "POST",
                 headers: {
                     Accept: "application/json",
